@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital@1&family=Martel+Sans&family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #d0eaff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.product {
+    width: 90%;
+    max-width: 750px;
+    display: flex;
+}
+
+.gallery {
+    flex-basis: 47%;
+    background-color: #241e20;
+    transform: scale(1.08);
+    box-shadow: -10px 5px 10px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.gallery img {
+    width: 100%;
+    display: block;
+    padding-top: 100px;
+}
+
+.details {
+    flex-basis: 53%;
+    background-color: white;
+    padding: 40px;
+    padding-left: 60px;
+    box-shadow: -10px 5px 10px 10px rgba(0, 0, 0, 0.1);
+    font-size: 13px;
+    font-weight: 500;
+    color: #777;
+}
+
+.details h1 {
+    color: #333;
+    font-size: 35px;
+}
+
+.details h2 {
+    color: #555;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.details h3 {
+    color: #00d874;
+    margin-bottom: 20px;
+}
+
+.details form {
+    font-size: 15px;
+    font-weight: 400
+}
+
+.size-select {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.size-select p {
+    width: 70px;
+}
+
+.size-select input:checked + span {
+    color: blue;
+    font-weight: 600;
+}
+
+.size-select input {
+    display: none;
+}
+
+.size-select span {
+    padding: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.color-select {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.color-select p {
+    width: 75px;
+}
+
+.color-select span {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+
+.color-1 {
+    background-color: red;
+}
+.color-2 {
+    background-color: green;
+}
+.color-3 {
+    background-color: blue;
+}
+.color-4 {
+    background-color: pink;
+}
+
+.color-select input {
+    display: none;
+}
+
+.color-select input:checked + span {
+    transform: scale(0.7);
+    box-shadow: 0 0 0 4px #fff, 0 0 0 6px #000;
+}
+
+.qty-select {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.qty-select p {
+    width: 75px;
+}
+
+.qty-select input {
+    background-color: #eee;
+    border: 0;
+    outline: 0;
+    padding: 2px 2px 2px 15px;
+    width: 50px;
+    border-radius: 12px;
+}
+
+form button {
+    background-color: #553ff0;
+    color: white;
+    font-size: 17px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 30px;
+    border: 0;
+    outline: 0;
+    margin-top: 50px;
+    box-shadow: 0 10px 10px rgba(85, 63, 240, 0.25);
+    cursor: pointer;
+}
+
+.controls {
+    position: absolute;
+    bottom: 40px;
+    right: 20px;
+}
+
+.btn {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 10px;
+    cursor: pointer;
+}
+
+.btn.active {
+    background-color: #553ff0;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .product {
+        flex-direction: column; /* Stack the product and details vertically on smaller screens */
+        max-width: 100%;
+    }
+
+    .gallery {
+        flex-basis: 100%;
+        background-color: #241e20;
+        transform: scale(1); /* Remove scale effect for smaller screens */
+        box-shadow: none;
+    }
+
+    .gallery img {
+        width: 100%;
+        padding-top: 0;
+    }
+
+    .details {
+        flex-basis: 100%;
+        padding: 20px;
+        padding-left: 20px;
+        font-size: 14px;
+    }
+
+    .details h1 {
+        font-size: 28px;
+    }
+
+    .details h2 {
+        font-size: 24px;
+    }
+
+    .details h3 {
+        font-size: 18px;
+    }
+
+    .size-select, .color-select, .qty-select {
+        margin-top: 20px;
+    }
+
+    .qty-select input {
+        width: 40px;
+    }
+
+    form button {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    /* Adjust the button indicators for the gallery on small screens */
+    .controls {
+        bottom: 20px;
+        right: 10px;
+    }
+
+    .btn {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+/* Larger Screen Devices */
+@media (min-width: 769px) {
+    .product {
+        width: 90%;
+        max-width: 750px;
+    }
+
+    .gallery {
+        flex-basis: 47%;
+    }
+
+    .details {
+        flex-basis: 53%;
+        padding-left: 60px;
+    }
+}
