@@ -61,7 +61,8 @@ That's it! Your product page is live. 🎉
 
 ## **📸 Screenshots**
 ### **🖥️ Desktop View**
-![Desktop Preview](images/desktop-view.png)
+![pro1](https://github.com/user-attachments/assets/162f2639-3644-4219-80f5-5c473b682662)
+
 
 ### **📱 Mobile View**
 ![Mobile Preview](images/mobile-view.png)
